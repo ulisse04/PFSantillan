@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;400;900&display=swap" rel="stylesheet">
     <title>Electro-Bits | Cotizá tu PC</title>
 </head>
 <body>
     <header>
-        <h1 class="listado"><a href="../index.html"><img src="../img/placeholder.png" alt="Electro-Bits" width="200" height="100"></a></h1>
-        <form action="" class="listado">
-            <input type="search" placeholder="Busqueda..." class="buscar">
-            <input type="submit">
+        <h1 class="header__logo"><a href="../index.html"><img src="../img/placeholder.png" alt="Electro-Bits" width="200" height="100"></a></h1>
+         
+        <form action="" class="header__form">
+            <input type="search" placeholder="Busqueda..." class="form__buscar">
+            <input type="submit" value="Buscar" class="form__buscar-boton">
         </form>
-        <a href="../index.html"><button>Iniciar Sesion</button></a>
-        <nav>
-            <hr>
+
+        <a href="../index.html"><button class="header__login">Iniciar Sesion</button></a>
+             
+        <nav class="header__nav">
             <ul>
-                <li class="listado"><a href="../pages/productos.html">Productos</a></li>
-                <li class="listado"><a href="../pages/cotizar.html">Cotizá tu PC</a></li>
-                <li class="listado"><a href="../pages/nosotros.html">Nosotros</a></li>
-                <li class="listado"><a href="../pages/carro.html">Carro</a></li>
+                <li class="secciones__boton"><a href="../pages/productos.html" class="secciones__texto">Productos</a></li>
+                <li class="secciones__boton"><a href="../pages/cotizar.html" class="secciones__texto">Cotizá tu PC</a></li>
+                <li class="secciones__boton"><a href="../pages/nosotros.html" class="secciones__texto">Nosotros</a></li>
+                <li class="secciones__boton"><a href="../pages/carro.html" class="secciones__texto">Carro</a></li>
             </ul>
-            <hr>
         </nav>
     </header>
 
@@ -36,34 +41,58 @@
 
             <article>
                 <form action="">
-                    <input type="text" placeholder="Nombre y Apellido" class="formulario">
-                    <input type="email" placeholder="Email" class="formulario">
-                    <input type="tel" placeholder="Teléfono de contacto" class="formulario">
-                    <label for="cpu">Marca de Procesador: </label>
-                    <select name="cpu" id="cpu">
+                    <input type="text" placeholder="Nombre y Apellido" class="formulario bloque">
+                    <input type="email" placeholder="Email" class="formulario bloque">
+                    <input type="tel" placeholder="Teléfono de contacto" class="formulario bloque">
+                    <label for="cpu" class="formulario bloque">Marca de Procesador: </label>
+                    <select name="cpu" id="cpu" class="formulario bloque">
                         <option value="amd">AMD</option>
                         <option value="intel">Intel</option>
                     </select>
-                    <textarea name="info" id="" cols="30" rows="10" placeholder="Contanos que uso le buscas dar a tu PC" class="formulario"></textarea>
-                    <input type="submit">
+                    <textarea name="info" id="" cols="30" rows="10" placeholder="Contanos que uso le buscas dar a tu PC" class="formulario bloque"></textarea>
+                    <input type="submit" value="Enviar" class="boton">
                 </form>
             </article>
 
             <article>
                 <hr>
-                <a href="../index.html"><img src="../img/placeholder.png" width="120" height="120" alt="Galería de banners"></a>
+                <div id="carouselinfo" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselinfo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselinfo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselinfo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="../img/placeholder_1.jpg" class="d-block w-100" alt="Placeholder publicidad #1">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../img/placeholder_2.jpg" class="d-block w-100" alt="Placeholder publicidad #2">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../img/placeholder_3.jpg" class="d-block w-100" alt="Placeholder publicidad #3">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselinfo" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselinfo" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
                 <hr>
             </article>
        </section>
     </main>
 
     <footer>
-        <hr>
-        <div>
+        <div class="footer__logo">
             <a href="../index.html"><img src="../img/placeholder.png" width="200" height="100" alt="Electro-Bits"></a>
         </div>
 
-        <div>
+        <div class="footer__nav">
             <ul>
                 <li><a href="../pages/productos.html">Productos</a></li>
                 <li><a href="../pages/cotizar.html">Cotizá tu PC</a></li>
@@ -72,22 +101,31 @@
             </ul>
         </div>
 
-        <div>
-            <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank"><span>contacto@electrobits.com</span></a>
-            <img src="../img/icon_whatsapp.png" width="16" height="16" alt="Icono Whatsapp"> 
-            <span>+54 11 0000-000</span>
-            <img src="../img/icon_phone.png" width="16" height="16" alt="Icono Llamada"> 
-            <span>+54 11 0000-000</span>
+        <div class="footer__contacto">
+            <div class="contacto__mail">
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank"><span>contacto@electrobits.com</span></a>
+            </div>
+            <div class="contacto__wsp">
+                <img src="../img/icon_whatsapp.png" width="16" height="16" alt="Icono Whatsapp"> 
+                <span>+54 11 0000-000</span>
+            </div>
+            <div class="contacto__tel">
+                <img src="../img/icon_phone.png" width="16" height="16" alt="Icono Llamada"> 
+                <span>+54 11 0000-000</span>
+            </div>
         </div>
 
-        <div>
+        <div class="footer__links">
             <p>Seguinos tambien en</p>
-            <a href="https://youtube.com" target="_blank"><img src="../img/icon_youtube.png" width="16" height="16" alt="Icono Youtube"></a>
-            <a href="https://instagram.com" target="_blank"><img src="../img/icon_instagram.png" width="16" height="16" alt="Icono Instagram"></a>
-            <a href="https://twitter.com" target="_blank"><img src="../img/icon_twitter.png" width="16" height="16" alt="Icono Twitter"></a>
-            <a href="https://linkedin.com" target="_blank"><img src="../img/icon_linkedin.png" width="16" height="16" alt="Icono Linked In"></a>
-            <a href="https://discord.com" target="_blank"><img src="../img/icon_discord.png" width="16" height="16" alt="Icono Discord"></a>
+            <div class="links__iconos">
+                <a href="https://youtube.com" target="_blank"><img src="../img/icon_youtube.png" width="16" height="16" alt="Icono Youtube"></a>
+                <a href="https://instagram.com" target="_blank"><img src="../img/icon_instagram.png" width="16" height="16" alt="Icono Instagram"></a>
+                <a href="https://twitter.com" target="_blank"><img src="../img/icon_twitter.png" width="16" height="16" alt="Icono Twitter"></a>
+                <a href="https://linkedin.com" target="_blank"><img src="../img/icon_linkedin.png" width="16" height="16" alt="Icono Linked In"></a>
+                <a href="https://discord.com" target="_blank"><img src="../img/icon_discord.png" width="16" height="16" alt="Icono Discord"></a>
+            </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
