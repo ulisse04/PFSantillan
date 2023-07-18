@@ -1,0 +1,21 @@
+.formulario{
+    margin: 0.5rem;
+}
+
+.boton{
+    grid-area: login;
+    padding: 0.3rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    border: none;
+    border-color: #232323;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    margin: 0.5rem;
+}
+
+.boton:hover{
+    background-color: #007bff;
+    color: #fff;
+}

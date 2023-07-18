@@ -1,320 +1,301 @@
-/* Reseteo del CSS */
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 h2 {
-    font-family: 'Kanit', sans-serif;;
+  font-family: "Kanit", sans-serif;
 }
 
 h3 {
-    font-family: 'Kanit', sans-serif;;
+  font-family: "Kanit", sans-serif;
 }
 
 p {
-    font-family: 'Kanit', sans-serif;;
-}
-
-/* Header */
-
-header {
-    display: grid;
-    grid-template-areas:
-        "logo form login"
-        "nav nav nav";
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    background-color: rgb(226, 37, 37);
-}
-
-.header__logo {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    grid-area: logo;
-}
-
-.header__form {
-    grid-area: form;
-}
-
-.header__form .form__buscar {
-    width: 300px;
-    height: 32px;
-    border-color: #232323;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 5px;
-}
-
-.header__form .form__buscar-boton {
-    padding: 0.3rem;
-    font-weight: bolder;
-    text-transform: uppercase;
-    border: none;
-    border-color: #232323;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 5px;
-}
-
-.header__form .form__buscar-boton:hover {
-    background-color: #007bff;
-    color: #fff;
-}
-
-.header__login {
-    grid-area: login;
-    padding: 0.3rem;
-    font-weight: bolder;
-    text-transform: uppercase;
-    border: none;
-    border-color: #232323;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 5px;
-}
-
-.header__login:hover {
-    background-color: #007bff;
-    color: #fff;
-}
-
-.header__nav {
-    grid-area: nav;
-    background-color: rgb(230, 53, 88);
-    width: 100%;
-    border-top: black;
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(230, 53, 88);
-    grid-column: 1 / -1;
-    height: 3.5rem;
-}
-
-.header__nav ul {
-    padding: 0;
-    margin: 0;
-}
-
-.header__nav .secciones__boton{
-    margin-right: 1rem;
-    margin-left: 1rem;
-    display: inline;
-}
-
-.header__nav .secciones__texto {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bolder;
-    text-transform: uppercase;
-    text-decoration: none;
-    background-color: rgb(236, 119, 40);
-    padding: 0.3rem;
-    border-radius: 5px;
-    border-color: black;
-    border-style: solid;
-    border-width: 3px;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
-    color: rgba(255, 255, 255, 0.815);
-    text-align: center;
-}
-
-.header__nav .secciones__texto:hover {
-    background-color: rgb(160, 81, 28);
-    color: rgba(255, 255, 255, 0.815);
-}
-
-@media (max-width: 1200px) {
-    header {
-      grid-template-areas:
-        "logo login"
-        "nav nav"
-        "form form";
-      grid-template-columns: 1fr 1fr;
-    }
-    
-    .header__logo {
-        margin-left: 0.5rem;
-    }
-
-    .header__nav{
-        height: 15rem;
-    }
-
-    .header__nav .secciones__texto{
-        display: block;
-        font-size: small;
-    }
-
-    .header__form .form__buscar {
-        width: 10rem;
-        height: 30px;
-    }
-    
-    .header__form .form__buscar-boton {
-        font-size: small;
-    }
-}
-
-/* Footer */
-
-footer {
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-    background-color: rgb(226, 37, 37);
-    font-family: 'Kanit', sans-serif;;
-    font-weight: bold;
-    height: 13rem;
-}
-
-footer .footer__nav a {
-    text-decoration: none;
-    background-color: rgb(236, 119, 40);
-    padding: 5px;
-    border-radius: 5px;
-    border-color: black;
-    border-style: solid;
-    border-width: 3px;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
-    color: rgba(255, 255, 255, 0.815);
-}
-
-footer .footer__nav a:hover {
-    background-color: rgb(160, 81, 28);
-    color: rgba(255, 255, 255, 0.815);
-}
-
-footer .footer__nav ul li {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bolder;
-    list-style-type: none;
-    text-transform: uppercase;
-    margin: 20px;
-}
-
-.footer__nav{
-    padding-left: 0px;
-    display: flex;
-    align-items: center;
-}
-
-.contacto__mail{
-    display: block;
-}
-
-.contacto__wsp{
-    display: block;
-}
-
-.contacto__tel{
-    display: block;
-}
-
-.links__iconos{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-@media (max-width: 1200px) {
-    .footer__logo{
-        display: none;
-    }
-
-    .footer__nav{
-        display: none;
-    }
-}
-
-/* Aside */
-
-aside {
-    position: fixed;
-    top: 30%;
-    right: 0;
-    background-color: #f1f1f1;
-    padding: 10px;
-    border-radius: 5px;
-    border-color: black;
-    border-style: ridge;
-    border-width: 5px;
-    padding: 5px;
-    font-weight: bolder;
-}
-
-aside h3 {
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-transform: uppercase;
-}
-
-aside ul li {
-    list-style-type: none;
-    padding: 3px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-aside ul a {
-    text-decoration: none;
+  font-family: "Kanit", sans-serif;
 }
 
 .linea {
-    display: inline;
+  display: inline;
 }
 
 .bloque {
-    display: block;
+  display: block;
 }
 
-.tarjeta{
-    padding: 20px;
-    text-align: center;
+aside {
+  position: fixed;
+  top: 30%;
+  right: 0;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: black;
+  border-style: ridge;
+  border-width: 5px;
+  padding: 5px;
+  font-weight: bolder;
 }
 
-.article__productos{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 20px;
+aside h3 {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
 }
 
-.article__masprod{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+aside ul li {
+  list-style-type: none;
+  padding: 3px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+aside ul a {
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(226, 37, 37);
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
+  height: 13rem;
+}
+
+footer .footer__nav a {
+  text-decoration: none;
+  background-color: rgb(236, 119, 40);
+  padding: 5px;
+  border-radius: 5px;
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+  color: rgba(255, 255, 255, 0.815);
+}
+
+footer .footer__nav a:hover {
+  background-color: rgb(160, 81, 28);
+  color: rgba(255, 255, 255, 0.815);
+}
+
+footer .footer__nav ul li {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+  list-style-type: none;
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+.footer__nav {
+  padding-left: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.contacto__mail {
+  display: block;
+}
+
+.contacto__wsp {
+  display: block;
+}
+
+.contacto__tel {
+  display: block;
+}
+
+.links__iconos {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 @media (max-width: 1200px) {
-    .article__productos{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 3rem;
-    }
+  .footer__logo {
+    display: none;
+  }
+  .footer__nav {
+    display: none;
+  }
+}
+header {
+  display: grid;
+  grid-template-areas: "logo form login" "nav nav nav";
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  background-color: rgb(226, 37, 37);
 }
 
-.formulario{
-    margin: 0.5rem;
+.header__logo {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  grid-area: logo;
 }
 
-.boton{
-    grid-area: login;
-    padding: 0.3rem;
-    font-weight: bolder;
-    text-transform: uppercase;
-    border: none;
-    border-color: #232323;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 5px;
-    margin: 0.5rem;
+.header__form {
+  grid-area: form;
 }
 
-.boton:hover{
-    background-color: #007bff;
-    color: #fff;
+.header__form .form__buscar {
+  width: 300px;
+  height: 32px;
+  border-color: #232323;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
 }
+
+.header__form .form__buscar-boton {
+  padding: 0.3rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border: none;
+  border-color: #232323;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.header__form .form__buscar-boton:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.header__login {
+  grid-area: login;
+  padding: 0.3rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border: none;
+  border-color: #232323;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.header__login:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.header__nav {
+  grid-area: nav;
+  background-color: rgb(230, 53, 88);
+  width: 100%;
+  border-top: black;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(230, 53, 88);
+  grid-column: 1/-1;
+  height: 3.5rem;
+}
+
+.header__nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+.header__nav .secciones__boton {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  display: inline;
+}
+
+.header__nav .secciones__texto {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: rgb(236, 119, 40);
+  padding: 0.3rem;
+  border-radius: 5px;
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+  color: rgba(255, 255, 255, 0.815);
+  text-align: center;
+}
+
+.header__nav .secciones__texto:hover {
+  background-color: rgb(160, 81, 28);
+  color: rgba(255, 255, 255, 0.815);
+}
+
+@media (max-width: 1200px) {
+  header {
+    grid-template-areas: "logo login" "nav nav" "form form";
+    grid-template-columns: 1fr 1fr;
+  }
+  .header__logo {
+    margin-left: 0.5rem;
+  }
+  .header__nav {
+    height: 15rem;
+  }
+  .header__nav .secciones__texto {
+    display: block;
+    font-size: small;
+  }
+  .header__form .form__buscar {
+    width: 10rem;
+    height: 30px;
+  }
+  .header__form .form__buscar-boton {
+    font-size: small;
+  }
+}
+.article__productos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+.tarjeta {
+  padding: 20px;
+  text-align: center;
+}
+
+.formulario {
+  margin: 0.5rem;
+}
+
+.boton {
+  grid-area: login;
+  padding: 0.3rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border: none;
+  border-color: #232323;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  margin: 0.5rem;
+}
+
+.boton:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.article__masprod {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .article__productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,10 @@
+.article__productos{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+
+.tarjeta{
+    padding: 20px;
+    text-align: center;
+}
