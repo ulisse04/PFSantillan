@@ -1,0 +1,11 @@
+.banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carousel{
+    background: rgb(80,48,82);
+    background: linear-gradient(90deg, rgba(80,48,82,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(80,48,82,1) 100%);
+}

@@ -2,58 +2,85 @@ footer {
     display: flex;
     justify-content:space-evenly;
     align-items: center;
-    background-color: rgb(226, 37, 37);
-    font-family: 'Kanit', sans-serif;;
+    background: rgba(136,41,108,1);
+    background: linear-gradient(180deg, rgba(136,41,108,1) 15%, rgba(88,24,69,1) 100%);
+    font-family: 'Overt', sans-serif;
     font-weight: bold;
-    height: 13rem;
 
     & .footer__nav{
         padding-left: 0px;
         display: flex;
         align-items: center;
+        justify-content: center;
+
+        & ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+            margin: 0px;
+        }
 
         & a{
             text-decoration: none;
-            background-color: rgb(236, 119, 40);
+            background-color: rgb(208, 143, 221);
             padding: 5px;
             border-radius: 5px;
             border-color: black;
             border-style: solid;
             border-width: 3px;
-            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
-            color: rgba(255, 255, 255, 0.815);
+            color: rgba(0, 0, 0, 0.815);
             
             &:hover{
-                background-color: rgb(160, 81, 28);
                 color: rgba(255, 255, 255, 0.815);
+                box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
             }
         }
 
         & ul li{
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-family: 'Overt', sans-serif;
             font-weight: bolder;
             list-style-type: none;
             text-transform: uppercase;
-            margin: 20px;
+            margin: 0.625rem;
         }
     }
 }
 
+.footer__contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
 .contacto__mail{
     display: block;
+
+    & a{
+        color: white;
+        text-decoration: none;
+    }
 }
 
 .contacto__wsp{
     display: block;
+    color: white;
 }
 
 .contacto__tel{
     display: block;
+    color: white;
 }
 
 .links__iconos{
     display: flex;
     justify-content: space-evenly;
+}
+
+.footer__links{
+    color:white;
 }
 
 @media (max-width: 1200px) {
