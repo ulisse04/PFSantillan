@@ -12,6 +12,12 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        
+        @include tablet{     
+            &{
+                display: none;
+            }
+        }
 
         & ul{
             display: flex;
@@ -83,13 +89,28 @@ footer {
     color:white;
 }
 
-@media (max-width: 1200px) {
+@include tablet {
     
     .footer__logo{
         display: none;
     }
+}
 
-    .footer__nav{
-        display: none;
+@include mobile {
+    
+    .footer__contacto{
+        font-size: xx-small;
+
+        & img{
+            max-height: 75%;
+        }
+    }
+
+    .footer__links{
+        font-size: x-small;
+    }
+
+    .links__iconos a img{
+        max-height: 75%;
     }
 }

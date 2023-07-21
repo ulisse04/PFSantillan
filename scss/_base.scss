@@ -9,8 +9,14 @@
     src: url(../fonts/Overt.ttf);
 }
 
-h2 {
+.encont__titulo {
+    display: none;
+}
+
+h2{
     font-family: 'Overt', sans-serif;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
 }
 
 h3 {
@@ -27,4 +33,16 @@ p {
 
 .bloque {
     display: block;
+}
+
+@mixin tablet {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
 }

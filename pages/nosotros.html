@@ -10,42 +10,56 @@
 </head>
 <body>
     <header>
-        <h1 class="header__logo"><a href="../index.html"><img src="../img/placeholder.png" alt="Electro-Bits" width="200" height="100"></a></h1>
+        <h1 class="header__logo"><a href="../index.html"><img src="../img/electrobits.png" class="logo__imagen" alt="Electro-Bits" width="300" height="40"></a></h1>
          
         <form action="" class="header__form">
             <input type="search" placeholder="Busqueda..." class="form__buscar">
             <input type="submit" value="Buscar" class="form__buscar-boton">
         </form>
 
-        <a href="../index.html"><button class="header__login">Iniciar Sesion</button></a>
+        <a href="../index.html" class="login__contenedor"><button class="login__boton">Iniciar Sesion</button></a>
              
-        <nav class="header__nav">
-            <ul>
-                <li class="secciones__boton"><a href="../pages/productos.html" class="secciones__texto">Productos</a></li>
-                <li class="secciones__boton"><a href="../pages/cotizar.html" class="secciones__texto">Cotizá tu PC</a></li>
-                <li class="secciones__boton"><a href="../pages/nosotros.html" class="secciones__texto">Nosotros</a></li>
-                <li class="secciones__boton"><a href="../pages/carro.html" class="secciones__texto">Carro</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid justify-content-center">
+              <button class="burger navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav__botones navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a href="../pages/productos.html" class="secciones__texto">Productos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../pages/cotizar.html" class="secciones__texto">Cotizá tu PC</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../pages/nosotros.html" class="secciones__texto">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../pages/carro.html" class="secciones__texto">Carro</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
 
     <main>
        <section>
             <h2>Nosotros</h2>
-            <article>
-                <p class="listado">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quaerat odit blanditiis explicabo vero at velit a similique, magnam debitis nam quisquam ducimus in quam, aliquid veniam dolor placeat quo.</p>
-                <img src="../img/placeholder.png" alt="Imagen de muestra" >
-            </article>
-            <article>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.099152533542!2d-58.376664359102605!3d-34.60165417306761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaccf4a5be6f%3A0x97ebb6aac5198f6c!2sCoderhouse!5e0!3m2!1ses!2sar!4v1686259289652!5m2!1ses!2sar" width="500" height="500" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <p class="listado">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi cupiditate similique animi est iusto aspernatur quam soluta quisquam, fugit, magnam officiis deserunt? Laudantium ratione commodi, suscipit excepturi nulla magni. Maiores!</p>
+            <article class="nosotros">
+                <p class="nosotros__parrafo1">Bienvenidos a Electro-bits, tu destino en tecnología para PC. Somos líderes en la venta de componentes y accesorios de PC, ofreciendo una amplia variedad de productos de alta calidad para satisfacer tus necesidades tecnológicas. Nuestra pasión por la tecnología nos impulsa a ser expertos en el campo, brindándote el mejor asesoramiento y atención al cliente para garantizar una experiencia de compra excepcional. En Electro-bits, creemos en la importancia de la calidad y la confiabilidad. Por eso, trabajamos con marcas reconocidas y confiables, asegurando que nuestros productos cumplan con los más altos estándares. Nuestro equipo de expertos está siempre dispuesto a asistirte, ofreciéndote un asesoramiento personalizado para ayudarte a encontrar exactamente lo que necesitas para mejorar tu equipo y potenciar su rendimiento.</p>
+                <img src="../img/electrobits_black.png" alt="Logo Electro-Bits" class="nosotros__logo">
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.099152533542!2d-58.376664359102605!3d-34.60165417306761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaccf4a5be6f%3A0x97ebb6aac5198f6c!2sCoderhouse!5e0!3m2!1ses!2sar!4v1686259289652!5m2!1ses!2sar" width="500" height="500" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="nosotros__mapa"></iframe>
+                <p class="nosotros__parrafo2">Además de nuestra calidad y atención al cliente, nos enorgullecemos de mantener precios competitivos y ofrecer promociones especiales para que puedas obtener los mejores productos sin comprometer tu presupuesto. En Electro-bits, no solo nos importa vender, sino también construir relaciones duraderas con nuestros clientes. Ya sea que busques procesadores de última generación, tarjetas gráficas potentes, placas madre de alto rendimiento o unidades de almacenamiento rápidas y confiables, en Electro-bits encontrarás todo lo que necesitas para llevar tu experiencia tecnológica al siguiente nivel. Te invitamos a explorar nuestra amplia gama de productos y unirte a nuestra comunidad de entusiastas de la tecnología. ¡Bienvenido a Electro-bits, tu compañero confiable en el mundo de la tecnología para PC!</p>
             </article>
        </section>
     </main>
 
     <footer>
         <div class="footer__logo">
-            <a href="../index.html"><img src="../img/placeholder.png" width="200" height="100" alt="Electro-Bits"></a>
+            <a href="../index.html"><img src="../img/electrobits.png" alt="Electro-Bits" width="300" height="40"></a>
         </div>
 
         <div class="footer__nav">
@@ -72,7 +86,7 @@
         </div>
 
         <div class="footer__links">
-            <p>Seguinos tambien en</p>
+            <span>Seguinos tambien en</span>
             <div class="links__iconos">
                 <a href="https://youtube.com" target="_blank"><img src="../img/icon_youtube.png" alt="Icono Youtube"></a>
                 <a href="https://instagram.com" target="_blank"><img src="../img/icon_instagram.png" alt="Icono Instagram"></a>

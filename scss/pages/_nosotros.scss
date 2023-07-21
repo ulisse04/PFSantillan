@@ -1,0 +1,66 @@
+.nosotros{
+    display: grid;
+    grid-template-areas:
+        "p1 logo"
+        "mapa p2";
+    justify-items: center;
+    align-items: center;
+    margin: 1rem;
+
+    &__parrafo1{
+        grid-area: p1;
+    }
+
+    &__logo{
+        grid-area: logo;
+        width: 600px;
+        max-height: auto;
+    }
+
+    &__mapa{
+        grid-area: mapa;
+        margin-right: 1rem;
+        max-height: auto;
+    }
+
+    &__parrafo2{
+        grid-area: p2;
+    }
+}
+
+@include tablet{
+    .nosotros{
+
+        &__logo{
+            width: 300px;
+        }
+        
+        &__mapa{
+            width: 300px;
+        }
+    }
+}
+
+@include mobile{
+    .nosotros{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        gap: 0.5rem;
+    
+        &__logo{
+            width: 300px;
+        }
+    
+        &__mapa{
+            width: auto;
+            height: 300px;
+        }
+    
+        &__parrafo2{
+            grid-area: p2;
+        }
+    }
+}
+

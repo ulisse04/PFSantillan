@@ -1,0 +1,11 @@
+main section h3{
+    margin-left: 0.5rem;
+}
+
+aside ul a li{
+    color: black;
+
+    &:hover{
+        color: rgb(208, 143, 221);
+    }
+}

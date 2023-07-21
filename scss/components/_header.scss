@@ -14,19 +14,24 @@ header {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     grid-area: logo;
+    justify-self: right;
+    margin-right: 1rem;
 }
 
 .header__form {
     grid-area: form;
     margin: 0.625rem;
+    display: flex;
+    gap: 5px;
 
     & .form__buscar{
-        width: 300px;
-        height: 32px;
+        width: 250px;
         border-color: #000000;
         border-width: 2px;
         border-style: solid;
         border-radius: 5px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
 
         &:hover{
             box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
@@ -42,8 +47,11 @@ header {
         border-width: 2px;
         border-style: solid;
         border-radius: 5px;
-        width: 75px;
+        width: 100px;
         background-color: rgb(193, 115, 209);
+        font-family: 'Overt', sans-serif;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
 
         &:hover{
             color: #fff;
@@ -52,7 +60,17 @@ header {
     }
 }
 
-.header__login {
+.login__contenedor{
+    justify-self: left;
+    align-self: center;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.login__boton {
     grid-area: login;
     padding: 0.3rem;
     font-weight: bolder;
@@ -63,6 +81,9 @@ header {
     border-style: solid;
     border-radius: 5px;
     background-color: rgb(193, 115, 209);
+    font-family: 'Overt', sans-serif;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 
     &:hover{
         color: #fff;
@@ -112,12 +133,13 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-color: rgb(102, 37, 97);
-    background-color: rgb(200, 78, 224);
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(208, 143, 221);
+    border-style: solid;
+    border-width: 3px;
 }
 
-@media (max-width: 1200px) {
+@include tablet {
     header {
       grid-template-areas:
         "logo login"
@@ -125,9 +147,22 @@ header {
         "form form";
       grid-template-columns: 1fr 1fr;
     }
+
+    .secciones__texto{
+        font-size: small;
+    }
     
     .header__logo {
         margin-left: 0.5rem;
+    }
+
+    .logo__imagen{
+        width: 250px;
+        height: 30px;
+    }
+
+    .login__boton{
+        font-size: small;
     }
 
     .header__nav{
@@ -141,13 +176,32 @@ header {
 
     .header__form{
 
-        & .form__buscar {
-            width: 10rem;
-            height: 30px;
-        }
-
         & .form__buscar-boton{
             font-size: small;
+        }
+    } 
+}
+
+@include mobile{
+    
+    .logo__imagen{
+        width: 150px;
+        height: 20px;
+    }
+
+    .secciones__texto{
+        font-size: x-small;
+    }
+
+    .login__boton{
+        font-size: x-small;
+    }
+
+    .header__form{
+
+        & .form__buscar-boton{
+            font-size: x-small;
+            width: auto;
         }
     } 
 }

@@ -7,4 +7,15 @@
 .tarjeta{
     padding: 20px;
     text-align: center;
+
+    &__producto{
+        max-width: auto;
+        height: 150px;
+    }
+}
+
+@include tablet{
+    .tarjeta{
+        font-size: small;
+    }
 }

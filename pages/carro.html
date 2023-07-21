@@ -10,63 +10,79 @@
 </head>
 <body>
     <header>
-        <h1 class="header__logo"><a href="../index.html"><img src="../img/placeholder.png" alt="Electro-Bits" width="200" height="100"></a></h1>
+        <h1 class="header__logo"><a href="../index.html"><img src="../img/electrobits.png" class="logo__imagen" alt="Electro-Bits" width="300" height="40"></a></h1>
          
         <form action="" class="header__form">
             <input type="search" placeholder="Busqueda..." class="form__buscar">
             <input type="submit" value="Buscar" class="form__buscar-boton">
         </form>
 
-        <a href="../index.html"><button class="header__login">Iniciar Sesion</button></a>
+        <a href="../index.html" class="login__contenedor"><button class="login__boton">Iniciar Sesion</button></a>
              
-        <nav class="header__nav">
-            <ul>
-                <li class="secciones__boton"><a href="../pages/productos.html" class="secciones__texto">Productos</a></li>
-                <li class="secciones__boton"><a href="../pages/cotizar.html" class="secciones__texto">Cotizá tu PC</a></li>
-                <li class="secciones__boton"><a href="../pages/nosotros.html" class="secciones__texto">Nosotros</a></li>
-                <li class="secciones__boton"><a href="../pages/carro.html" class="secciones__texto">Carro</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid justify-content-center">
+              <button class="burger navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav__botones navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a href="../pages/productos.html" class="secciones__texto">Productos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../pages/cotizar.html" class="secciones__texto">Cotizá tu PC</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../pages/nosotros.html" class="secciones__texto">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../pages/carro.html" class="secciones__texto">Carro</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
 
     <main>
         <section>
             <h2>Carro</h2>
             <hr>
-            <article>
-                <div>
-                    <img src="../img/placeholder.png" alt="Producto">
-                    <p>Nombre del producto</p>
-                    <p>$0</p>
+            <article class="article__productos">
+                <div class="tarjeta">
+                    <img src="../img/articulos/AMD Ryzen™ 9 7900X.webp" class="tarjeta__producto" alt="Producto">
+                    <p>AMD Ryzen™ 9 7900X</p>
+                    <p>$320.000</p>
                 </div>
-                <div>
-                    <img src="../img/placeholder.png" alt="Producto">
-                    <p>Nombre del producto</p>
-                    <p>$0</p>
+                <div class="tarjeta">
+                    <img src="../img/articulos/MEMORIA RAM DDR4 CORSAIR 16GB 2X8GB 3600 MHZ VENGEANCE PRO RGB WHITE.webp" class="tarjeta__producto" alt="Producto">
+                    <p>Corsair 16GB 2x8GB 3600Mhz DDR4 Vengeance Pro RGB White</p>
+                    <p>$60.000</p>
                 </div>
-                <div>
-                    <img src="../img/placeholder.png" alt="Producto">
-                    <p>Nombre del producto</p>
-                    <p>$0</p>
+                <div class="tarjeta">
+                    <img src="../img/articulos/PLACA DE VIDEO 8GB RTX 3060 TI ASUS KO O8G V2 LHR.webp" class="tarjeta__producto" alt="Producto">
+                    <p>RTX 3060 TI Asus KO O8G V2 LHR</p>
+                    <p>$310.000</p>
                 </div>
             </article>
         </section>
     </main>
 
     <aside>
-        <h3>Resumen de compra</h3>
+        <h3>Resumen</h3>
         <hr>
         <ul>
-            <li>Nombre del Producto <span>$0</span></li> 
-            <li>Nombre del Producto <span>$0</span></li> 
-            <li>Nombre del Producto <span>$0</span></li>
-            <li>Total <span>$0</span></li>
+            <li>AMD Ryzen™ 9 7900X <p>$320.000</p></li> 
+            <li>Corsair 16GB 2x8GB 3600Mhz DDR4 <p>$60.000</p></li> 
+            <li>RTX 3060 TI Asus KO O8G V2 LHR <p>$310.000</p></li>
+            <li>Total <p>$690.000</p></li>
+            <a href="#"><input type="submit" value="COMPRAR" class="carro__boton"></a>
         </ul>
     </aside>
 
     <footer>
         <div class="footer__logo">
-            <a href="../index.html"><img src="../img/placeholder.png" width="200" height="100" alt="Electro-Bits"></a>
+            <a href="../index.html"><img src="../img/electrobits.png" alt="Electro-Bits" width="300" height="40"></a>
         </div>
 
         <div class="footer__nav">
@@ -93,7 +109,7 @@
         </div>
 
         <div class="footer__links">
-            <p>Seguinos tambien en</p>
+            <span>Seguinos tambien en</span>
             <div class="links__iconos">
                 <a href="https://youtube.com" target="_blank"><img src="../img/icon_youtube.png" alt="Icono Youtube"></a>
                 <a href="https://instagram.com" target="_blank"><img src="../img/icon_instagram.png" alt="Icono Instagram"></a>

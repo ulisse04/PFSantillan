@@ -1,21 +1,75 @@
-.formulario{
-    margin: 0.5rem;
+.cotizar{
+
+    &__parrafo{
+        margin-left: 0.5rem;
+    }
+
+    &__nombape{
+        display: block;
+        &:hover{
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+        }
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    &__email{
+        display: block;
+        &:hover{
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+        }
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    &__tel{
+        display: block;
+        &:hover{
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+        }
+        margin-bottom: 1rem;
+        margin-left: 0.5rem;
+    }
+
+    &__proce{
+        display: block;
+        margin-left: 0.5rem;
+    }
+
+    &__info{
+        display: block;
+        margin-left: 0.5rem;
+        &:hover{
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+        }
+    }
+
+    &__boton{
+        display: block;
+        font-family: 'Overt', sans-serif;
+        font-weight: bolder;
+        text-transform: uppercase;
+        text-decoration: none;
+        background-color: rgb(208, 143, 221);
+        padding: 0.3rem;
+        border-radius: 5px;
+        border-color: black;
+        border-style: solid;
+        border-width: 3px;
+        color: rgba(0, 0, 0, 0.815);
+        text-align: center;
+        margin: 0.625rem;
+        margin-top: 0.625rem;
+
+        &:hover{
+            color: #fff;
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+        }
+    }
 }
 
-.boton{
-    grid-area: login;
-    padding: 0.3rem;
-    font-weight: bolder;
-    text-transform: uppercase;
-    border: none;
-    border-color: #232323;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 5px;
-    margin: 0.5rem;
-
-    &:hover{
-        background-color: #007bff;
-        color: #fff;
-    }
+.proce__selec{
+    display: block;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
 }
