@@ -6,8 +6,12 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
-    background: rgb(88,24,69);
-    background: linear-gradient(180deg, rgba(88,24,69,1) 50%, rgba(136,41,108,1) 100%);
+    background: rgb(88, 24, 69);
+    background: linear-gradient(180deg, rgba(88, 24, 69, 1) 50%, rgba(136, 41, 108, 1) 100%);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }
 
 .header__logo {
@@ -24,7 +28,7 @@ header {
     display: flex;
     gap: 5px;
 
-    & .form__buscar{
+    & .form__buscar {
         width: 250px;
         border-color: #000000;
         border-width: 2px;
@@ -32,13 +36,14 @@ header {
         border-radius: 5px;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
+        padding-left: 0.3rem;
 
-        &:hover{
+        &:hover {
             box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
         }
     }
 
-    & .form__buscar-boton{
+    & .form__buscar-boton {
         padding: 0.3rem;
         font-weight: bolder;
         text-transform: uppercase;
@@ -53,14 +58,14 @@ header {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
 
-        &:hover{
+        &:hover {
             color: #fff;
             box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
         }
     }
 }
 
-.login__contenedor{
+.login__contenedor {
     justify-self: left;
     align-self: center;
     margin-left: 1rem;
@@ -85,29 +90,29 @@ header {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 
-    &:hover{
+    &:hover {
         color: #fff;
         box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
     }
 }
 
-.navbar{
+.navbar {
     grid-area: nav;
     margin: 0.625rem;
 
-    & li{
+    & li {
         margin: 0.625rem;
     }
 }
 
-.nav__botones{
+.nav__botones {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0px;
 }
 
-.secciones__texto{
+.secciones__texto {
     font-family: 'Overt', sans-serif;
     font-weight: bolder;
     text-transform: uppercase;
@@ -123,13 +128,13 @@ header {
     margin: 0.625rem;
     margin-top: 0.625rem;
 
-    &:hover{
+    &:hover {
         color: #fff;
         box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
     }
 }
 
-.burger{
+.burger {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,67 +146,67 @@ header {
 
 @include tablet {
     header {
-      grid-template-areas:
-        "logo login"
-        "nav nav"
-        "form form";
-      grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "logo login"
+            "nav nav"
+            "form form";
+        grid-template-columns: 1fr 1fr;
     }
 
-    .secciones__texto{
+    .secciones__texto {
         font-size: small;
     }
-    
+
     .header__logo {
         margin-left: 0.5rem;
     }
 
-    .logo__imagen{
+    .logo__imagen {
         width: 250px;
         height: 30px;
     }
 
-    .login__boton{
+    .login__boton {
         font-size: small;
     }
 
-    .header__nav{
+    .header__nav {
         height: 15rem;
 
-        & .secciones__texto{
+        & .secciones__texto {
             display: block;
             font-size: small;
         }
     }
 
-    .header__form{
+    .header__form {
 
-        & .form__buscar-boton{
+        & .form__buscar-boton {
             font-size: small;
         }
-    } 
+    }
 }
 
-@include mobile{
-    
-    .logo__imagen{
+@include mobile {
+
+    .logo__imagen {
         width: 150px;
         height: 20px;
     }
 
-    .secciones__texto{
+    .secciones__texto {
         font-size: x-small;
     }
 
-    .login__boton{
+    .login__boton {
         font-size: x-small;
     }
 
-    .header__form{
+    .header__form {
 
-        & .form__buscar-boton{
+        & .form__buscar-boton {
             font-size: x-small;
             width: auto;
         }
-    } 
+    }
 }

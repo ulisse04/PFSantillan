@@ -1,50 +1,69 @@
-.cotizar{
+.cotizar {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
 
-    &__parrafo{
+    &__parrafo {
         margin-left: 0.5rem;
     }
 
-    &__nombape{
+    &__nombape {
         display: block;
-        &:hover{
+
+        &:hover {
             box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
         }
+
         margin-bottom: 0.5rem;
         margin-left: 0.5rem;
+        width: 15rem;
+        padding-left: 0.3rem;
     }
 
-    &__email{
+    &__email {
         display: block;
-        &:hover{
+
+        &:hover {
             box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
         }
+
         margin-bottom: 0.5rem;
         margin-left: 0.5rem;
+        width: 15rem;
+        padding-left: 0.3rem;
     }
 
-    &__tel{
+    &__tel {
         display: block;
-        &:hover{
+
+        &:hover {
             box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
         }
+
         margin-bottom: 1rem;
         margin-left: 0.5rem;
+        width: 15rem;
+        padding-left: 0.3rem;
     }
 
-    &__proce{
+    &__proce {
         display: block;
         margin-left: 0.5rem;
     }
 
-    &__info{
+    &__info {
         display: block;
-        margin-left: 0.5rem;
-        &:hover{
+
+        &:hover {
             box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
         }
+
+        width: 40rem;
+        padding-left: 0.3rem;
     }
 
-    &__boton{
+    &__boton {
         display: block;
         font-family: 'Overt', sans-serif;
         font-weight: bolder;
@@ -61,15 +80,37 @@
         margin: 0.625rem;
         margin-top: 0.625rem;
 
-        &:hover{
+        &:hover {
             color: #fff;
             box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
         }
     }
 }
 
-.proce__selec{
+.proce__selec {
     display: block;
     margin-bottom: 1rem;
     margin-left: 0.5rem;
+}
+
+@include tablet {
+    .cotizar {
+        &__boton {
+            font-size: small;
+        }
+    }
+}
+
+@include mobile {
+    .cotizar {
+        &__info {
+            width: 18rem;
+            margin-right: 5rem;
+            margin-left: 5rem;
+        }
+
+        &__boton {
+            font-size: x-small;
+        }
+    }
 }

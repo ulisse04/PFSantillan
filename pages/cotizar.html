@@ -1,141 +1,165 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <title>Electro-Bits | Cotizá tu PC</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <title>Electro-Bits | Cotizá tu PC</title>
 </head>
+
 <body>
-    <header>
-        <h1 class="header__logo"><a href="../index.html"><img src="../img/electrobits.png" class="logo__imagen" alt="Electro-Bits" width="300" height="40"></a></h1>
-         
-        <form action="" class="header__form">
-            <input type="search" placeholder="Busqueda..." class="form__buscar">
-            <input type="submit" value="Buscar" class="form__buscar-boton">
+  <header>
+    <h1 class="header__logo"><a href="../index.html"><img src="../img/electrobits.png" class="logo__imagen"
+          alt="Electro-Bits" width="300" height="40"></a></h1>
+
+    <form action="" class="header__form">
+      <input type="search" placeholder="Busqueda..." class="form__buscar">
+      <input type="submit" value="Buscar" class="form__buscar-boton">
+    </form>
+
+    <a href="../index.html" class="login__contenedor"><button class="login__boton">Iniciar Sesion</button></a>
+
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid justify-content-center">
+        <button class="burger navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav__botones navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="../pages/productos.html" class="secciones__texto">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a href="../pages/cotizar.html" class="secciones__texto">Cotizá tu PC</a>
+            </li>
+            <li class="nav-item">
+              <a href="../pages/nosotros.html" class="secciones__texto">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a href="../pages/carro.html" class="secciones__texto">Carro</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Cotizá tu PC</h2>
+      <article class="cotizar__parrafo">
+        <p>Nuestro formulario de pedidos de cotización te permite enviarnos un mensaje con una selección de cada
+          componente que deseas incluir en tu nueva PC, desde potentes procesadores y tarjetas gráficas de última
+          generación hasta placas madre y unidades de almacenamiento de alto rendimiento. Con nuestro formulario de
+          pedidos de cotización, puedes especificar tus preferencias y necesidades exactas para que podamos brindarte
+          una cotización personalizada que se ajuste perfectamente a tus requerimientos. Simplemente detallanos en el
+          mensaje las opciones que deseas, como el tipo de procesador, la cantidad de memoria RAM, la capacidad del
+          disco duro y cualquier otro accesorio adicional que desees incluir. Una vez que completes el formulario,
+          nuestro equipo de ventas y expertos en computadoras, se encargaran de enviarte la cotización y optimizar cada
+          detalle para brindarte un rendimiento excepcional.</p>
+      </article>
+
+      <article>
+        <form action="" class="cotizar">
+          <input type="text" placeholder="Nombre y Apellido" class="cotizar__nombape">
+          <input type="email" placeholder="Email" class="cotizar__email">
+          <input type="tel" placeholder="Teléfono de contacto" class="cotizar__tel">
+          <label for="cpu" class="cotizar__proce">Marca de Procesador: </label>
+          <select name="cpu" id="cpu" class="proce__selec">
+            <option value="amd">AMD</option>
+            <option value="intel">Intel</option>
+          </select>
+          <textarea name="info" id="" cols="30" rows="10"
+            placeholder="Contanos que uso le buscas dar a tu PC y/o qué componentes te gustaría incluir"
+            class="cotizar__info"></textarea>
+          <input type="submit" value="Enviar" class="cotizar__boton">
         </form>
+      </article>
 
-        <a href="../index.html" class="login__contenedor"><button class="login__boton">Iniciar Sesion</button></a>
-             
-        <nav class="navbar navbar-expand-md">
-            <div class="container-fluid justify-content-center">
-              <button class="burger navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="nav__botones navbar-nav me-auto">
-                  <li class="nav-item">
-                    <a href="../pages/productos.html" class="secciones__texto">Productos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../pages/cotizar.html" class="secciones__texto">Cotizá tu PC</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../pages/nosotros.html" class="secciones__texto">Nosotros</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../pages/carro.html" class="secciones__texto">Carro</a>
-                  </li>
-                </ul>
-              </div>
+      <article>
+        <div id="carouselinfo" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselinfo" data-bs-slide-to="0" class="active" aria-current="true"
+              aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselinfo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselinfo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="../pages/productos.html"><img src="../img/banner_1.png" class="banner w-100"
+                  alt="Buscá más productos en Electro-Bits"></a>
             </div>
-          </nav>
-    </header>
-
-    <main>
-       <section>   
-            <h2>Cotizá tu PC</h2>
-            <article class="cotizar__parrafo">
-                <p>Nuestro formulario de pedidos de cotización te permite enviarnos un mensaje con una selección de cada componente que deseas incluir en tu nueva PC, desde potentes procesadores y tarjetas gráficas de última generación hasta placas madre y unidades de almacenamiento de alto rendimiento. Con nuestro formulario de pedidos de cotización, puedes especificar tus preferencias y necesidades exactas para que podamos brindarte una cotización personalizada que se ajuste perfectamente a tus requerimientos. Simplemente detallanos en el mensaje las opciones que deseas, como el tipo de procesador, la cantidad de memoria RAM, la capacidad del disco duro y cualquier otro accesorio adicional que desees incluir. Una vez que completes el formulario, nuestro equipo de ventas y expertos en computadoras, se encargaran de enviarte la cotización y optimizar cada detalle para brindarte un rendimiento excepcional.</p>
-            </article>
-
-            <article>
-                <form action="" class="cotizar">
-                    <input type="text" placeholder="Nombre y Apellido" class="cotizar__nombape">
-                    <input type="email" placeholder="Email" class="cotizar__email">
-                    <input type="tel" placeholder="Teléfono de contacto" class="cotizar__tel">
-                    <label for="cpu" class="cotizar__proce">Marca de Procesador: </label>
-                    <select name="cpu" id="cpu" class="proce__selec">
-                        <option value="amd">AMD</option>
-                        <option value="intel">Intel</option>
-                    </select>
-                    <textarea name="info" id="" cols="30" rows="10" placeholder="Contanos que uso le buscas dar a tu PC y/o que componentes te gustaría incluir" class="cotizar__info"></textarea>
-                    <input type="submit" value="Enviar" class="cotizar__boton">
-                </form>
-            </article>
-
-            <article>
-                <div id="carouselinfo" class="carousel slide">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselinfo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselinfo" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselinfo" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <a href="../pages/productos.html"><img src="../img/banner_1.png" class="banner w-100" alt="Buscá más productos en Electro-Bits"></a>
-                      </div>
-                      <div class="carousel-item">
-                        <a href="../pages/cotizar.html"><img src="../img/banner_2.png" class="banner w-100" alt="Cotizá tu PC en Electro-Bits"></a>
-                      </div>
-                      <div class="carousel-item">
-                        <a href="../pages/nosotros.html"><img src="../img/banner_3.png" class="banner w-100" alt="Averiguá más sobre nosotros"></a>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselinfo" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselinfo" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-            </article>
-       </section>
-    </main>
-
-    <footer>
-        <div class="footer__logo">
-            <a href="../index.html"><img src="../img/electrobits.png" alt="Electro-Bits" width="300" height="40"></a>
+            <div class="carousel-item">
+              <a href="../pages/cotizar.html"><img src="../img/banner_2.png" class="banner w-100"
+                  alt="Cotizá tu PC en Electro-Bits"></a>
+            </div>
+            <div class="carousel-item">
+              <a href="../pages/nosotros.html"><img src="../img/banner_3.png" class="banner w-100"
+                  alt="Averiguá más sobre nosotros"></a>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselinfo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselinfo" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+      </article>
+    </section>
+  </main>
 
-        <div class="footer__nav">
-            <ul>
-                <li><a href="../pages/productos.html">Productos</a></li>
-                <li><a href="../pages/cotizar.html">Cotizá tu PC</a></li>
-                <li><a href="../pages/nosotros.html">Nosotros</a></li>
-                <li><a href="../pages/carro.html">Carro</a></li>
-            </ul>
-        </div>
+  <footer>
+    <div class="footer__logo">
+      <a href="../index.html"><img src="../img/electrobits.png" alt="Electro-Bits" width="300" height="40"></a>
+    </div>
 
-        <div class="footer__contacto">
-            <div class="contacto__mail">
-                <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank"><span>contacto@electrobits.com</span></a>
-            </div>
-            <div class="contacto__wsp">
-                <img src="../img/icon_whatsapp.png" alt="Icono Whatsapp"> 
-                <span>+54 11 0000-000</span>
-            </div>
-            <div class="contacto__tel">
-                <img src="../img/icon_phone.png" alt="Icono Llamada"> 
-                <span>+54 11 0000-000</span>
-            </div>
-        </div>
+    <div class="footer__nav">
+      <ul>
+        <li><a href="../pages/productos.html">Productos</a></li>
+        <li><a href="../pages/cotizar.html">Cotizá tu PC</a></li>
+        <li><a href="../pages/nosotros.html">Nosotros</a></li>
+        <li><a href="../pages/carro.html">Carro</a></li>
+      </ul>
+    </div>
 
-        <div class="footer__links">
-            <span>Seguinos tambien en</span>
-            <div class="links__iconos">
-                <a href="https://youtube.com" target="_blank"><img src="../img/icon_youtube.png" alt="Icono Youtube"></a>
-                <a href="https://instagram.com" target="_blank"><img src="../img/icon_instagram.png" alt="Icono Instagram"></a>
-                <a href="https://twitter.com" target="_blank"><img src="../img/icon_twitter.png" alt="Icono Twitter"></a>
-                <a href="https://linkedin.com" target="_blank"><img src="../img/icon_linkedin.png" alt="Icono Linked In"></a>
-                <a href="https://discord.com" target="_blank"><img src="../img/icon_discord.png" alt="Icono Discord"></a>
-            </div>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <div class="footer__contacto">
+      <div class="contacto__mail">
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=new"
+          target="_blank"><span>contacto@electrobits.com</span></a>
+      </div>
+      <div class="contacto__wsp">
+        <img src="../img/icon_whatsapp.png" alt="Icono Whatsapp">
+        <span>+54 11 0000-000</span>
+      </div>
+      <div class="contacto__tel">
+        <img src="../img/icon_phone.png" alt="Icono Llamada">
+        <span>+54 11 0000-000</span>
+      </div>
+    </div>
+
+    <div class="footer__links">
+      <span>Seguinos tambien en</span>
+      <div class="links__iconos">
+        <a href="https://youtube.com" target="_blank"><img src="../img/icon_youtube.png" alt="Icono Youtube"></a>
+        <a href="https://instagram.com" target="_blank"><img src="../img/icon_instagram.png" alt="Icono Instagram"></a>
+        <a href="https://twitter.com" target="_blank"><img src="../img/icon_twitter.png" alt="Icono Twitter"></a>
+        <a href="https://linkedin.com" target="_blank"><img src="../img/icon_linkedin.png" alt="Icono Linked In"></a>
+        <a href="https://discord.com" target="_blank"><img src="../img/icon_discord.png" alt="Icono Discord"></a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

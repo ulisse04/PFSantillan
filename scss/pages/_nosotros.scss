@@ -1,4 +1,4 @@
-.nosotros{
+.nosotros {
     display: grid;
     grid-template-areas:
         "p1 logo"
@@ -7,60 +7,115 @@
     align-items: center;
     margin: 1rem;
 
-    &__parrafo1{
+    &__parrafo1 {
         grid-area: p1;
     }
 
-    &__logo{
+    &__logo {
         grid-area: logo;
         width: 600px;
         max-height: auto;
     }
 
-    &__mapa{
+    &__mapa {
         grid-area: mapa;
         margin-right: 1rem;
         max-height: auto;
     }
 
-    &__parrafo2{
+    &__parrafo2 {
         grid-area: p2;
     }
 }
 
-@include tablet{
-    .nosotros{
+.terminos {
+    &__parrafo1 {
+        margin-left: 0.5rem;
+    }
 
-        &__logo{
-            width: 300px;
-        }
-        
-        &__mapa{
-            width: 300px;
-        }
+    &__parrafo2 {
+        margin-left: 0.5rem;
+    }
+
+    &__despedida {
+        text-align: center;
+        font-weight: bold;
     }
 }
 
-@include mobile{
-    .nosotros{
+.listado {
+    &__destacado {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-decoration: underline;
+        font-weight: bolder;
+    }
+}
+
+@include tablet {
+    .nosotros {
+
+        &__logo {
+            width: 300px;
+        }
+
+        &__mapa {
+            width: 300px;
+        }
+    }
+
+    h3 {
+        text-align: center;
+    }
+}
+
+@include mobile {
+    .nosotros {
         display: flex;
         flex-direction: column;
         justify-items: center;
         align-items: center;
         gap: 0.5rem;
-    
-        &__logo{
+
+        &__logo {
             width: 300px;
         }
-    
-        &__mapa{
+
+        &__mapa {
             width: auto;
             height: 300px;
         }
-    
-        &__parrafo2{
+
+        &__parrafo1 {
+            font-size: small;
+        }
+
+        &__parrafo2 {
+            font-size: small;
             grid-area: p2;
         }
     }
-}
 
+    .terminos {
+        &__parrafo1 {
+            font-size: small;
+        }
+
+        &__parrafo2 {
+            font-size: small;
+        }
+
+        &__despedida {
+            font-size: small;
+        }
+    }
+
+    .listado {
+        &__destacado {
+            font-size: small;
+        }
+
+        &__parrafo {
+            font-size: small;
+        }
+    }
+}

@@ -1,25 +1,25 @@
-.banner{
+.banner {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.carousel{
-    background: rgb(80,48,82);
-    background: radial-gradient(circle, rgba(80,48,82,1) 0%, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 95%, rgba(80,48,82,1) 100%);
+.carousel {
+    background: rgb(80, 48, 82);
+    background: radial-gradient(circle, rgba(80, 48, 82, 1) 0%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 1) 95%, rgba(80, 48, 82, 1) 100%);
 }
 
 @include tablet {
-    .banner{
+    .banner {
         max-height: 75%;
         border-style: ridge;
-        border-color: rgb(80,48,82);
+        border-color: rgb(80, 48, 82);
     }
 }
 
 @include mobile {
-    .carousel{
+    .carousel {
         display: none;
     }
 }

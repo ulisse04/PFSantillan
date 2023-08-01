@@ -1,25 +1,19 @@
 footer {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
-    background: rgba(136,41,108,1);
-    background: linear-gradient(180deg, rgba(136,41,108,1) 15%, rgba(88,24,69,1) 100%);
+    background: rgba(136, 41, 108, 1);
+    background: linear-gradient(180deg, rgba(136, 41, 108, 1) 15%, rgba(88, 24, 69, 1) 100%);
     font-family: 'Overt', sans-serif;
     font-weight: bold;
 
-    & .footer__nav{
+    & .footer__nav {
         padding-left: 0px;
         display: flex;
         align-items: center;
         justify-content: center;
-        
-        @include tablet{     
-            &{
-                display: none;
-            }
-        }
 
-        & ul{
+        & ul {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -27,7 +21,7 @@ footer {
             margin: 0px;
         }
 
-        & a{
+        & a {
             text-decoration: none;
             background-color: rgb(208, 143, 221);
             padding: 5px;
@@ -36,14 +30,14 @@ footer {
             border-style: solid;
             border-width: 3px;
             color: rgba(0, 0, 0, 0.815);
-            
-            &:hover{
+
+            &:hover {
                 color: rgba(255, 255, 255, 0.815);
                 box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
             }
         }
 
-        & ul li{
+        & ul li {
             font-family: 'Overt', sans-serif;
             font-weight: bolder;
             list-style-type: none;
@@ -53,7 +47,7 @@ footer {
     }
 }
 
-.footer__contacto{
+.footer__contacto {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,56 +55,62 @@ footer {
     color: black;
 }
 
-.contacto__mail{
+.contacto__mail {
     display: block;
 
-    & a{
+    & a {
         color: white;
         text-decoration: none;
     }
 }
 
-.contacto__wsp{
+.contacto__wsp {
     display: block;
     color: white;
 }
 
-.contacto__tel{
+.contacto__tel {
     display: block;
     color: white;
 }
 
-.links__iconos{
+.links__iconos {
     display: flex;
     justify-content: space-evenly;
 }
 
-.footer__links{
-    color:white;
+.footer__links {
+    color: white;
 }
 
 @include tablet {
-    
-    .footer__logo{
-        display: none;
+
+    footer {
+        & .footer__logo {
+            display: none;
+        }
+
+        & .footer__nav {
+            display: none;
+        }
     }
 }
 
 @include mobile {
-    
-    .footer__contacto{
+
+    .footer__contacto {
         font-size: xx-small;
 
-        & img{
+        & img {
             max-height: 75%;
         }
     }
 
-    .footer__links{
+    .footer__links {
         font-size: x-small;
     }
 
-    .links__iconos a img{
+    .links__iconos a img {
         max-height: 75%;
     }
 }
