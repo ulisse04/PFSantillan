@@ -3,6 +3,8 @@ header {
     grid-template-areas:
         "logo form login"
         "nav nav nav";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 50px;
     justify-items: center;
     align-items: center;
     background: $col-prim;
@@ -19,6 +21,12 @@ header {
     grid-area: logo;
     justify-self: right;
     margin-right: 1rem;
+
+    & img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .header__form {
@@ -150,6 +158,7 @@ header {
             "nav nav"
             "form form";
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 50px 50px;
     }
 
     .secciones__texto {
@@ -184,6 +193,10 @@ header {
             font-size: small;
         }
     }
+
+    .form__buscar {
+        font-size: small;
+    }
 }
 
 @include mobile {
@@ -203,9 +216,13 @@ header {
 
     .header__form {
 
-        & .form__buscar-boton {
+        & .form__buscar {
             font-size: x-small;
-            width: auto;
+
+            &-boton {
+                font-size: x-small;
+                width: auto;
+            }
         }
     }
 }

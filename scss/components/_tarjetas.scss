@@ -1,83 +1,81 @@
- .productos {
-     display: grid;
-     grid-template-columns: repeat(5, 1fr);
-     grid-gap: 20px;
+.productos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
 
-     &__tarjeta {
-         display: grid;
-         grid-template-rows: auto auto 25px 50px;
-         align-items: center;
-         justify-items: center;
-         margin: 10px;
+    &__tarjeta {
+        display: grid;
+        grid-template-rows: auto auto 25px 50px;
+        align-items: center;
+        justify-items: center;
+        margin: 10px;
 
-         &__producto {
-             height: auto;
-             width: 150px;
-         }
+        &__producto {
+            height: auto;
+            width: 150px;
+        }
 
-         & p {
-             text-align: center;
-             margin: 5px;
-         }
+        & p {
+            text-align: center;
+            margin: 5px;
+        }
 
-         & a {
-             text-decoration: none;
-         }
-     }
- }
+        & a {
+            text-decoration: none;
+        }
+    }
+}
 
- .tarjeta {
-     &__boton {
-         display: block;
-         font-family: $fuente;
-         font-weight: bolder;
-         text-transform: uppercase;
-         background-color: rgb(208, 143, 221);
-         padding: 0.3rem;
-         border-radius: 5px;
-         border-color: black;
-         border-style: solid;
-         border-width: 3px;
-         color: rgba(0, 0, 0, 0.815);
-         text-align: center;
-         margin: 0.625rem;
-         margin-top: 0.625rem;
+.tarjeta {
+    &__boton {
+        display: block;
+        font-family: $fuente;
+        font-weight: bolder;
+        background-color: rgb(208, 143, 221);
+        padding: 0.3rem;
+        border-radius: 5px;
+        border-color: black;
+        border-style: solid;
+        border-width: 3px;
+        text-align: center;
+        margin: 0.625rem;
+        margin-top: 0.625rem;
 
-         &:hover {
-             color: #fff;
-             box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
-         }
-     }
- }
+        &:hover {
+            color: #fff;
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+        }
+    }
+}
 
- @include tablet {
-     .productos {
-         display: grid;
-         grid-template-columns: repeat(3, 1fr);
-         grid-gap: 3rem;
-     }
+@include tablet {
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3rem;
+    }
 
-     .productos__tarjeta {
-         font-size: small;
-     }
+    .productos__tarjeta {
+        font-size: small;
+    }
 
-     .tarjeta__boton {
-         font-size: small;
-     }
- }
+    .tarjeta__boton {
+        font-size: small;
+    }
+}
 
- @include mobile {
-     .productos {
-         display: grid;
-         grid-template-columns: repeat(1, 1fr);
-         grid-gap: 3rem;
-     }
+@include mobile {
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 3rem;
+    }
 
-     .productos__tarjeta {
-         font-size: x-small;
-     }
+    .productos__tarjeta {
+        font-size: x-small;
+    }
 
-     .tarjeta__boton {
-         font-size: x-small;
-     }
- }
+    .tarjeta__boton {
+        font-size: x-small;
+    }
+}

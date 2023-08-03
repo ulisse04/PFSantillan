@@ -50,17 +50,18 @@ footer {
   background: linear-gradient(180deg, rgb(136, 41, 108) 15%, rgb(88, 24, 69) 100%);
   font-family: "overt", sans-serif;
   font-weight: bold;
+  height: 125px;
 }
 footer .footer__nav {
   padding-left: 0px;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
 footer .footer__nav ul {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  justify-items: center;
   padding: 0px;
   margin: 0px;
 }
@@ -86,6 +87,19 @@ footer .footer__nav ul li {
   margin: 0.625rem;
 }
 
+.footer__links {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__seguinos {
+  margin-bottom: 10px;
+}
+.footer__iconos a {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
 .footer__contacto {
   display: flex;
   flex-direction: column;
@@ -96,6 +110,7 @@ footer .footer__nav ul li {
 
 .contacto__mail {
   display: block;
+  margin-bottom: 5px;
 }
 .contacto__mail a {
   color: white;
@@ -112,16 +127,10 @@ footer .footer__nav ul li {
   color: white;
 }
 
-.links__iconos {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.footer__links {
-  color: white;
-}
-
 @media (max-width: 1200px) {
+  footer {
+    height: 100px;
+  }
   footer .footer__logo {
     display: none;
   }
@@ -130,22 +139,27 @@ footer .footer__nav ul li {
   }
 }
 @media (max-width: 768px) {
+  footer {
+    height: 80px;
+  }
   .footer__contacto {
     font-size: xx-small;
   }
   .footer__contacto img {
-    max-height: 75%;
+    max-height: 15px;
   }
   .footer__links {
     font-size: x-small;
   }
-  .links__iconos a img {
-    max-height: 75%;
+  .footer__iconos a img {
+    max-height: 15px;
   }
 }
 header {
   display: grid;
   grid-template-areas: "logo form login" "nav nav nav";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 50px;
   justify-items: center;
   align-items: center;
   background: rgb(88, 24, 69);
@@ -162,6 +176,11 @@ header {
   grid-area: logo;
   justify-self: right;
   margin-right: 1rem;
+}
+.header__logo img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__form {
@@ -283,6 +302,7 @@ header {
   header {
     grid-template-areas: "logo login" "nav nav" "form form";
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 50px 50px;
   }
   .secciones__texto {
     font-size: small;
@@ -307,6 +327,9 @@ header {
   .header__form .form__buscar-boton {
     font-size: small;
   }
+  .form__buscar {
+    font-size: small;
+  }
 }
 @media (max-width: 768px) {
   .logo__imagen {
@@ -317,6 +340,9 @@ header {
     font-size: x-small;
   }
   .login__boton {
+    font-size: x-small;
+  }
+  .header__form .form__buscar {
     font-size: x-small;
   }
   .header__form .form__buscar-boton {
@@ -352,14 +378,12 @@ header {
   display: block;
   font-family: "overt", sans-serif;
   font-weight: bolder;
-  text-transform: uppercase;
   background-color: rgb(208, 143, 221);
   padding: 0.3rem;
   border-radius: 5px;
   border-color: black;
   border-style: solid;
   border-width: 3px;
-  color: rgba(0, 0, 0, 0.815);
   text-align: center;
   margin: 0.625rem;
   margin-top: 0.625rem;
@@ -524,12 +548,12 @@ header {
 .masprod__boton {
   padding: 0.3rem;
   font-weight: bolder;
-  border: none;
   border-color: #000000;
-  border-width: 2px;
-  border-style: solid;
   border-radius: 5px;
-  background-color: rgb(193, 115, 209);
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+  background-color: rgb(208, 143, 221);
   margin: 10px;
 }
 .masprod__boton:hover {

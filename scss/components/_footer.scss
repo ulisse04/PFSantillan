@@ -6,17 +6,18 @@ footer {
     background: $grad-sec;
     font-family: $fuente;
     font-weight: bold;
+    height: 125px;
 
     & .footer__nav {
         padding-left: 0px;
-        display: flex;
         align-items: center;
         justify-content: center;
 
         & ul {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
             align-items: center;
+            justify-items: center;
             padding: 0px;
             margin: 0px;
         }
@@ -47,16 +48,38 @@ footer {
     }
 }
 
-.footer__contacto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: black;
+.footer{
+    &__links {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    &__seguinos{
+        margin-bottom: 10px;
+    }
+
+    &__iconos{
+        
+        & a{
+            margin-left: 0.2rem;
+            margin-right: 0.2rem;
+        }
+    }
+
+    &__contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: black;
+    }
 }
 
 .contacto__mail {
     display: block;
+    margin-bottom: 5px;
 
     & a {
         color: white;
@@ -74,18 +97,11 @@ footer {
     color: white;
 }
 
-.links__iconos {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.footer__links {
-    color: white;
-}
-
 @include tablet {
 
     footer {
+        height: 100px;
+
         & .footer__logo {
             display: none;
         }
@@ -98,19 +114,25 @@ footer {
 
 @include mobile {
 
-    .footer__contacto {
-        font-size: xx-small;
+    footer {
+        height: 80px;
+    }
 
-        & img {
-            max-height: 75%;
+    .footer{
+        &__contacto {
+            font-size: xx-small;
+    
+            & img {
+                max-height: 15px;
+            }
+        }
+
+        &__links {
+            font-size: x-small;
         }
     }
 
-    .footer__links {
-        font-size: x-small;
-    }
-
-    .links__iconos a img {
-        max-height: 75%;
+    .footer__iconos a img{
+        max-height: 15px;
     }
 }
