@@ -158,7 +158,7 @@ header {
             "nav nav"
             "form form";
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 50px 50px;
+        grid-template-rows: auto auto 50px;
     }
 
     .secciones__texto {
