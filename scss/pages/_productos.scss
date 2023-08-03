@@ -1,11 +1,69 @@
-main section h3 {
-    margin-left: 0.5rem;
+.general-productos {
+    display: grid;
+    grid-template-areas:
+        "productos productos categorias";
+    justify-items: center;
+    align-items: flex-start;
+    gap: 10px;
 }
 
-aside ul a li {
-    color: black;
+.seccion-productos {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 
-    &:hover {
-        color: rgb(208, 143, 221);
+    & h3 {
+        margin-left: 0.5rem;
     }
 }
+
+.listado-categorias {
+    grid-area: categorias;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    border-color: black;
+    border-style: ridge;
+    border-width: 5px;
+    font-weight: bolder;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: sticky;
+    top: 40%;
+    right: 10px;
+
+    & ul {
+        padding: 0;
+        margin: 0;
+
+        & li {
+            list-style-type: none;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: black;
+
+            &:hover {
+                color: rgb(208, 143, 221);
+            }
+        }
+
+        & a {
+            text-decoration: none;
+        }
+    }
+}
+
+@include tablet {
+    .general-productos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .listado-categorias {
+        transform: none;
+        position: initial;
+        margin: 10px;
+        font-size: small;
+    }
+}
+
+@include mobile {}

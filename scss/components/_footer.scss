@@ -2,9 +2,9 @@ footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background: rgba(136, 41, 108, 1);
-    background: linear-gradient(180deg, rgba(136, 41, 108, 1) 15%, rgba(88, 24, 69, 1) 100%);
-    font-family: 'Overt', sans-serif;
+    background: $col-sec;
+    background: $grad-sec;
+    font-family: $fuente;
     font-weight: bold;
 
     & .footer__nav {
@@ -38,7 +38,7 @@ footer {
         }
 
         & ul li {
-            font-family: 'Overt', sans-serif;
+            font-family: $fuente;
             font-weight: bolder;
             list-style-type: none;
             text-transform: uppercase;

@@ -3,11 +3,10 @@ header {
     grid-template-areas:
         "logo form login"
         "nav nav nav";
-    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
-    background: rgb(88, 24, 69);
-    background: linear-gradient(180deg, rgba(88, 24, 69, 1) 50%, rgba(136, 41, 108, 1) 100%);
+    background: $col-prim;
+    background: $grad-prim;
     position: sticky;
     top: 0;
     left: 0;
@@ -54,7 +53,7 @@ header {
         border-radius: 5px;
         width: 100px;
         background-color: rgb(193, 115, 209);
-        font-family: 'Overt', sans-serif;
+        font-family: $fuente;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
 
@@ -86,7 +85,7 @@ header {
     border-style: solid;
     border-radius: 5px;
     background-color: rgb(193, 115, 209);
-    font-family: 'Overt', sans-serif;
+    font-family: $fuente;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 
@@ -113,7 +112,7 @@ header {
 }
 
 .secciones__texto {
-    font-family: 'Overt', sans-serif;
+    font-family: $fuente;
     font-weight: bolder;
     text-transform: uppercase;
     text-decoration: none;

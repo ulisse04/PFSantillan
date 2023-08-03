@@ -5,21 +5,21 @@
 }
 
 @font-face {
-  font-family: Overt;
-  src: url(../fonts/Overt.ttf);
+  font-family: overt;
+  src: url(../fonts/overt.ttf);
 }
 .encont__titulo {
   display: none;
 }
 
 h2 {
-  font-family: "Overt", sans-serif;
+  font-family: "overt", sans-serif;
   margin-top: 1rem;
   margin-left: 0.5rem;
 }
 
 h3 {
-  font-family: "Overt", sans-serif;
+  font-family: "overt", sans-serif;
 }
 
 p {
@@ -34,47 +34,21 @@ p {
   display: block;
 }
 
-aside {
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  border-color: black;
-  border-style: ridge;
-  border-width: 5px;
-  font-weight: bolder;
-  position: fixed;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  padding: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-aside ul {
-  padding: 0;
-  margin: 0;
-}
-aside ul li {
-  list-style-type: none;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-}
-aside ul a {
-  text-decoration: none;
-}
-@media (max-width: 1200px) {
-  aside {
-    transform: none;
-    position: initial;
+@media (max-width: 768px) {
+  h2 {
     text-align: center;
-    margin: 10px;
+  }
+  h3 {
+    text-align: center;
   }
 }
-
 footer {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background: rgb(136, 41, 108);
   background: linear-gradient(180deg, rgb(136, 41, 108) 15%, rgb(88, 24, 69) 100%);
-  font-family: "Overt", sans-serif;
+  font-family: "overt", sans-serif;
   font-weight: bold;
 }
 footer .footer__nav {
@@ -105,7 +79,7 @@ footer .footer__nav a:hover {
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
 }
 footer .footer__nav ul li {
-  font-family: "Overt", sans-serif;
+  font-family: "overt", sans-serif;
   font-weight: bolder;
   list-style-type: none;
   text-transform: uppercase;
@@ -172,7 +146,6 @@ footer .footer__nav ul li {
 header {
   display: grid;
   grid-template-areas: "logo form login" "nav nav nav";
-  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
   background: rgb(88, 24, 69);
@@ -221,7 +194,7 @@ header {
   border-radius: 5px;
   width: 100px;
   background-color: rgb(193, 115, 209);
-  font-family: "Overt", sans-serif;
+  font-family: "overt", sans-serif;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -251,7 +224,7 @@ header {
   border-style: solid;
   border-radius: 5px;
   background-color: rgb(193, 115, 209);
-  font-family: "Overt", sans-serif;
+  font-family: "overt", sans-serif;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -276,7 +249,7 @@ header {
 }
 
 .secciones__texto {
-  font-family: "Overt", sans-serif;
+  font-family: "overt", sans-serif;
   font-weight: bolder;
   text-transform: uppercase;
   text-decoration: none;
@@ -351,31 +324,75 @@ header {
     width: auto;
   }
 }
-.article__productos {
+.productos {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
 }
-
-.tarjeta {
-  display: flex;
-  flex-direction: column;
+.productos__tarjeta {
+  display: grid;
+  grid-template-rows: auto auto 25px 50px;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
   margin: 10px;
 }
-.tarjeta__producto {
+.productos__tarjeta__producto {
   height: auto;
   width: 150px;
 }
-.tarjeta p {
+.productos__tarjeta p {
   text-align: center;
   margin: 5px;
 }
+.productos__tarjeta a {
+  text-decoration: none;
+}
+
+.tarjeta__boton {
+  display: block;
+  font-family: "overt", sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  background-color: rgb(208, 143, 221);
+  padding: 0.3rem;
+  border-radius: 5px;
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+  color: rgba(0, 0, 0, 0.815);
+  text-align: center;
+  margin: 0.625rem;
+  margin-top: 0.625rem;
+}
+.tarjeta__boton:hover {
+  color: #fff;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+}
 
 @media (max-width: 1200px) {
-  .tarjeta {
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+  }
+  .productos__tarjeta {
     font-size: small;
+  }
+  .tarjeta__boton {
+    font-size: small;
+  }
+}
+@media (max-width: 768px) {
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+  }
+  .productos__tarjeta {
+    font-size: x-small;
+  }
+  .tarjeta__boton {
+    font-size: x-small;
   }
 }
 .banner {
@@ -455,7 +472,7 @@ header {
 }
 .cotizar__boton {
   display: block;
-  font-family: "Overt", sans-serif;
+  font-family: "overt", sans-serif;
   font-weight: bolder;
   text-transform: uppercase;
   text-decoration: none;
@@ -501,19 +518,19 @@ header {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-family: "Overt", sans-serif;
+  font-family: "overt", sans-serif;
 }
 
 .masprod__boton {
   padding: 0.3rem;
   font-weight: bolder;
-  text-transform: uppercase;
   border: none;
   border-color: #000000;
   border-width: 2px;
   border-style: solid;
   border-radius: 5px;
   background-color: rgb(193, 115, 209);
+  margin: 10px;
 }
 .masprod__boton:hover {
   color: #fff;
@@ -575,11 +592,6 @@ header {
 }
 
 @media (max-width: 1200px) {
-  .article__productos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3rem;
-  }
   .productos__scroll img {
     width: 375px;
     max-height: 70%;
@@ -603,7 +615,7 @@ header {
   grid-template-areas: "p1 logo" "mapa p2";
   justify-items: center;
   align-items: center;
-  margin: 1rem;
+  margin: 0.5rem;
 }
 .nosotros__parrafo1 {
   grid-area: p1;
@@ -646,9 +658,6 @@ header {
   .nosotros__mapa {
     width: 300px;
   }
-  h3 {
-    text-align: center;
-  }
 }
 @media (max-width: 768px) {
   .nosotros {
@@ -688,7 +697,14 @@ header {
     font-size: small;
   }
 }
-.resumen {
+.carrito {
+  display: grid;
+  grid-template-areas: "productos productos resumen";
+  justify-items: center;
+  align-items: center;
+}
+.carrito__resumen {
+  grid-area: resumen;
   background-color: #f1f1f1;
   border-radius: 5px;
   border-color: black;
@@ -699,20 +715,21 @@ header {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   margin: 10px;
   text-align: center;
+  width: auto;
 }
-.resumen ul {
+.carrito__resumen ul {
   padding: 0;
   margin: 0;
 }
-.resumen ul li {
+.carrito__resumen ul li {
   list-style-type: none;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
-.resumen ul a {
+.carrito__resumen ul a {
   text-decoration: none;
 }
 
-.carro__boton {
+.resumen__boton {
   padding: 0.3rem;
   font-weight: bolder;
   text-transform: uppercase;
@@ -723,11 +740,11 @@ header {
   border-radius: 5px;
   width: auto;
   background-color: rgb(193, 115, 209);
-  font-family: "Overt", sans-serif;
+  font-family: "overt", sans-serif;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-.carro__boton:hover {
+.resumen__boton:hover {
   color: #fff;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
 }
@@ -737,11 +754,16 @@ header {
 }
 
 @media (max-width: 1200px) {
-  .resumen {
-    font-size: medium;
+  .carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .carro__boton {
-    font-size: medium;
+  .carrito__resumen {
+    font-size: small;
+  }
+  .resumen__boton {
+    font-size: small;
   }
   .terminos__texto {
     font-size: small;
@@ -751,22 +773,72 @@ header {
   }
 }
 @media (max-width: 768px) {
-  .resumen {
-    font-size: small;
+  .carrito__resumen {
+    font-size: x-small;
   }
-  .carro__boton {
+  .resumen__boton {
     font-size: x-small;
   }
 }
-main section h3 {
+.general-productos {
+  display: grid;
+  grid-template-areas: "productos productos categorias";
+  justify-items: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.seccion-productos {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.seccion-productos h3 {
   margin-left: 0.5rem;
 }
 
-aside ul a li {
+.listado-categorias {
+  grid-area: categorias;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  border-color: black;
+  border-style: ridge;
+  border-width: 5px;
+  font-weight: bolder;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: sticky;
+  top: 40%;
+  right: 10px;
+}
+.listado-categorias ul {
+  padding: 0;
+  margin: 0;
+}
+.listado-categorias ul li {
+  list-style-type: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: black;
 }
-aside ul a li:hover {
+.listado-categorias ul li:hover {
   color: rgb(208, 143, 221);
+}
+.listado-categorias ul a {
+  text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+  .general-productos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .listado-categorias {
+    transform: none;
+    position: initial;
+    margin: 10px;
+    font-size: small;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

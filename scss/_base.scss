@@ -1,3 +1,11 @@
+$col-prim: rgb(88, 24, 69);
+$grad-prim: linear-gradient(180deg, rgba(88, 24, 69, 1) 50%, rgba(136, 41, 108, 1) 100%);
+
+$col-sec: rgba(136, 41, 108, 1);
+$grad-sec: linear-gradient(180deg, rgba(136, 41, 108, 1) 15%, rgba(88, 24, 69, 1) 100%);
+
+$fuente: 'overt', sans-serif;
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +13,8 @@
 }
 
 @font-face {
-    font-family: Overt;
-    src: url(../fonts/Overt.ttf);
+    font-family: overt;
+    src: url(../fonts/overt.ttf);
 }
 
 .encont__titulo {
@@ -14,13 +22,13 @@
 }
 
 h2 {
-    font-family: 'Overt', sans-serif;
+    font-family: 'overt', sans-serif;
     margin-top: 1rem;
     margin-left: 0.5rem;
 }
 
 h3 {
-    font-family: 'Overt', sans-serif;
+    font-family: 'overt', sans-serif;
 }
 
 p {
@@ -44,5 +52,15 @@ p {
 @mixin mobile {
     @media (max-width: 768px) {
         @content;
+    }
+}
+
+@include mobile {
+    h2 {
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
     }
 }

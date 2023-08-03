@@ -5,7 +5,7 @@
         "mapa p2";
     justify-items: center;
     align-items: center;
-    margin: 1rem;
+    margin: 0.5rem;
 
     &__parrafo1 {
         grid-area: p1;
@@ -61,10 +61,6 @@
         &__mapa {
             width: 300px;
         }
-    }
-
-    h3 {
-        text-align: center;
     }
 }
 
