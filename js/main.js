@@ -1,15 +1,51 @@
 // Variable para almacenar el total de la compra
 var totalCompra = 0;
 
+// Array para almacenar los productos y sus precios
+var productos = [];
+
 // Función para agregar productos
 function agregarProducto(precio, producto) {
     totalCompra += precio;
-    alert("¡Agregaste " + producto + " al carrito!" + "\nTotal de compra: $" + totalCompra.toFixed(2));
+    if (producto && precio) {
+        productos.push({ nombre: producto, precio: precio });
+        alert("¡Agregaste " + producto + " al carrito! con un precio de: $" + precio.toLocaleString(undefined, { maximumFractionDigits: 2 }) + "\n\nTotal de compra hasta ahora: $" + totalCompra.toLocaleString(undefined, { maximumFractionDigits: 2 }));
+    } else {
+        alert("¡Agregaste un producto al carrito!" + "\n\nTotal de compra hasta ahora: $" + totalCompra.toLocaleString(undefined, { maximumFractionDigits: 2 }));
+    }
 }
 
-// Función para mostrar el total de la compra
+// Función para eliminar productos del carrito
+function eliminarProducto() {
+    var listaEliminar = "Productos en el carrito para eliminar:\n\n";
+    for (var i = 0; i < productos.length; i++) {
+        listaEliminar += (i + 1) + ". " + productos[i].nombre + " - $" + productos[i].precio.toLocaleString(undefined, { maximumFractionDigits: 2 }) + "\n";
+    }
+
+    if (productos.length === 0) {
+        alert("No hay productos en el carrito para eliminar.");
+        return;
+    }
+
+    var productoAEliminar = prompt(listaEliminar + "\nSeleccione el número del producto que desea eliminar:");
+
+    if (productoAEliminar && !isNaN(productoAEliminar) && productoAEliminar >= 1 && productoAEliminar <= productos.length) {
+        var indice = productoAEliminar - 1;
+        totalCompra -= productos[indice].precio;
+        alert("Has eliminado " + productos[indice].nombre + " del carrito.");
+        productos.splice(indice, 1);
+    } else {
+        alert("Opción inválida...");
+    }
+}
+
+// Función para mostrar el total de la compra y la lista de productos
 function mostrarTotal() {
-    alert("Total de compra: $" + totalCompra.toFixed(2));
+    var listaProductos = "Productos en el carrito:\n\n";
+    for (var i = 0; i < productos.length; i++) {
+        listaProductos += productos[i].nombre + " - $" + productos[i].precio.toLocaleString(undefined, { maximumFractionDigits: 2 }) + "\n";
+    }
+    alert(listaProductos + "\n" + "Total de compra: $" + totalCompra.toLocaleString(undefined, { maximumFractionDigits: 2 }));
 }
 
 // Flag para controlar ejecuciones
@@ -22,7 +58,8 @@ while (flagCont) {
         "--- MENU PRINCIPAL ---\n\n" +
         "1. Agregar productos\n" +
         "2. Mostrar total de compra\n" +
-        "3. Salir"
+        "3. Eliminar producto del carrito\n" + // Nueva opción para eliminar productos
+        "4. Salir"
     );
 
     switch (menu) {
@@ -74,6 +111,10 @@ while (flagCont) {
             break;
 
         case "3":
+            eliminarProducto(); // Llama al nuevo método para eliminar productos
+            break;
+
+        case "4":
             alert("¡Hasta luego!");
             // Cambia el valor de la flag para salir del bucle
             flagCont = false;
