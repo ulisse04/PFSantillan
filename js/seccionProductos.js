@@ -3,9 +3,17 @@ const categorias = ["prodmoth", "prodcpu", "prodram", "prodalmacenamiento", "pro
 
 window.addEventListener('load', () => {
     // Recuperar el carrito desde localStorage
-    const carritoData = localStorage.getItem('carrito');
-    if (carritoData) {
+    if (localStorage.getItem('carrito')){
+        const carritoData = localStorage.getItem('carrito');
         carrito = JSON.parse(carritoData);
+        console.table(carrito);
+
+        renderizarProds(carrito);
+        resumenCarrito();
+    }
+    else{
+        localStorage.setItem('carrito', []);
+        resumenCarrito();
     }
 });
 
