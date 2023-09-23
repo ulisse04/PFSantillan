@@ -1,6 +1,7 @@
 var listado = document.getElementById('prods');
 let carrito = [];
 
+resumenCarrito();
 document.addEventListener('DOMContentLoaded', () => {
     // Recuperar el carrito desde localStorage
     const carritoData = localStorage.getItem('carrito');
@@ -10,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.table(carrito);
 
         renderizarProds(carrito);
-        resumenCarrito();
     }
 });
 
