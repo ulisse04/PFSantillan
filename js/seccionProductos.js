@@ -9,11 +9,9 @@ window.addEventListener('load', () => {
         console.table(carrito);
 
         renderizarProds(carrito);
-        resumenCarrito();
     }
     else{
         localStorage.setItem('carrito', []);
-        resumenCarrito();
     }
 });
 
@@ -37,7 +35,7 @@ function renderizarProds(listaProds) {
         botonAgregar.classList.add('tarjeta__boton');
         botonAgregar.textContent = 'Agregar';
         botonAgregar.addEventListener('click', () => {
-            agregarAlCarrito(prod);
+            agregarCarrito(prod);
         });
 
         tarjeta.appendChild(imagenProducto);
@@ -55,7 +53,7 @@ for (const cat of categorias){
 }
 
 
-function agregarAlCarrito(producto) {
+function agregarCarrito(producto) {
     carrito.push(producto);
     console.table(carrito);
     alert(`¡${producto.nombre} se agrego al carrito exitosamente!`);
