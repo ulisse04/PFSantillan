@@ -357,7 +357,7 @@ header {
 }
 .productos__tarjeta {
   display: grid;
-  grid-template-rows: auto auto 25px 50px;
+  grid-template-rows: repeat(4, auto);
   align-items: center;
   justify-items: center;
   margin: 10px;
@@ -365,6 +365,7 @@ header {
 .productos__tarjeta__producto {
   height: auto;
   width: 150px;
+  margin: 0 auto;
 }
 .productos__tarjeta p {
   text-align: center;
@@ -391,6 +392,12 @@ header {
 .tarjeta__boton:hover {
   color: #fff;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+}
+.tarjeta__eliminar:first-child {
+  justify-self: end;
+}
+.tarjeta__eliminar:hover {
+  filter: drop-shadow(1px 1px 0px rgb(1, 1, 1));
 }
 
 @media (max-width: 1200px) {

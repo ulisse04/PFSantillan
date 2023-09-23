@@ -1,3 +1,5 @@
+// Codigo JS sin uso actualmente
+
 // Variable para almacenar el total de la compra
 var totalCompra = 0;
 
